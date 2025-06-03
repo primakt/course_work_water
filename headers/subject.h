@@ -4,9 +4,10 @@
 
 class Subject {
 public:
+    virtual ~Subject() = default;
     void addObserver(Observer* observer);
     void removeObserver(Observer* observer);
     void notifyObservers();
-private:
+protected:
     std::unordered_set<Observer*> observers;
 };
