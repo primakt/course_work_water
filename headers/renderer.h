@@ -1,9 +1,9 @@
 #pragma once
-#include "river.h"
+#include "scene.h"
 
 class Renderer {
 public:
     void run();
 private:
-    River river;
+    Scene scene;
 };
