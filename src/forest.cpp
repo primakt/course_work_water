@@ -3,22 +3,22 @@
 #include <cstdlib>
 
 Forest::Forest() {
-    forest.resize(13, std::string(80, ' '));
+    forest.resize(FOREST_HEIGHT, std::string(WIDTH, ' '));
     const std::string TREE = "(Y)";
     for (int y = 0; y < forest.size(); ++y) {
-        for (int x = 0; x < 80; ++x) {
-            if ((rand() % 100) < 7 && x + TREE.size() <= 80) {
+        for (int x = 0; x < WIDTH; ++x) {
+            if ((rand() % 100) < 7 && x + TREE.size() <= WIDTH) {
                 forest[y].replace(x, TREE.size(), TREE);
             }
         }
     }
-    forest.back().assign(80, '=');
+    forest.back().assign(WIDTH, '=');
 }
 
 void Forest::draw() {
     setColor(GREEN);
-    for (int y = 0; y < forest.size(); ++y) {
-        gotoxy(0, 12 + y);
+    for (int y = 0; y < FOREST_HEIGHT; ++y) {
+        gotoxy(0, SKY_HEIGHT + RIVER_HEIGHT + y);
         std::cout << forest[y];
     }
 }

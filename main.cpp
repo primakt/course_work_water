@@ -1,6 +1,7 @@
 #include "renderer.h"
 
-int main() {
+int main()
+{
     Renderer renderer;
     renderer.run();
     return 0;

@@ -9,10 +9,7 @@ void Subject::removeObserver(Observer* observer) {
 }
 
 void Subject::notifyObservers() {
-    auto observersCopy = observers; // Защита от concurrent modification
-    for (auto observer : observersCopy) {
-        if (observers.find(observer) != observers.end()) {
-            observer->update();
-        }
+    for (auto observer : observers) {
+        observer->update();
     }
 }

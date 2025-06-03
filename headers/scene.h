@@ -14,7 +14,7 @@ public:
     
     void draw() override;
     void update() override;
-    
+
 private:
     std::vector<std::unique_ptr<Drawable>> objects;
 };

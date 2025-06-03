@@ -4,7 +4,7 @@
 SmallWave::SmallWave(int x, int y) : Wave(x, y) {}
 
 void SmallWave::draw() {
-    if (y >= 0 && y < 25) {
+    if (y >= 0 && y < HEIGHT) {
         gotoxy(x, y);
         std::cout << pattern[(frameCounter++) % pattern.size()];
     }

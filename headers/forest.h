@@ -1,5 +1,4 @@
 #pragma once
-
 #include "drawable.h"
 #include <vector>
 #include <string>

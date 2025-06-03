@@ -5,9 +5,15 @@
 
 class Sky : public Drawable {
 public:
-    Sky();
     void draw() override;
     void update() override {}
 private:
-    std::vector<std::string> sky;
+    std::vector<std::string> sky = {
+        "                                                                                ",
+        " .--. .--.                                                                      ",
+        "(    (    )                                                                     ",
+        " '-.  '-. '                                                                     ",
+        "   '--'                                                                        ",
+        "                                                                                "
+    };
 };
